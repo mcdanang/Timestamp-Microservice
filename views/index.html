@@ -12,6 +12,21 @@
     <h1>Timestamp Microservice</h1>
     <hr />
     <div class="container">
+      <h3>User Stories:</h3>
+      <ol class="user-stories">
+  
+        <li>The API endpoint is <code>GET [project-url]/api/:date?</code></li>
+        <li>A date is valid if can be successfully parsed by <code>new Date(date)</code>.<br></li>
+        <li>API accepts unix time.</li>
+        <li>If the date is <strong>empty</strong>, the service uses the current timestamp.</li>
+        <li>If the date is <strong>valid</strong>, the api returns a JSON having the structure<br><code>{"unix":
+            &lt;Date.parse(date)&gt;, "utc" : &lt;date.toUTCString()&gt; }</code><br>
+          e.g. <code>{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</code></li>
+        <li>If the date string is <strong>invalid</strong> the api returns a JSON having the structure <br>
+          <code>{"error" : "Invalid Date" }</code>.
+        </li>
+      </ol>
+      
       <h3>Example Usage:</h3>
       <ul>
         <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
