@@ -44,3 +44,10 @@ li {
 a {
 	color: #2574A9;
 }
+
+.user-stories {
+  position: relative;
+  text-align: justify;
+  max-width: 700px;
+  margin: 15px auto;
+}
